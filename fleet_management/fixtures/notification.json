@@ -1,0 +1,110 @@
+[
+ {
+  "name": "Fleet - Vehicle Service Due",
+  "enabled": 1,
+  "is_standard": 1,
+  "module": "Fleet Management",
+  "channel": "Email",
+  "subject": "Service due for {{ doc.registration_no }} on {{ doc.next_due_date }}",
+  "event": "Days Before",
+  "document_type": "Fleet Maintenance Plan",
+  "date_changed": "next_due_date",
+  "days_in_advance": 7,
+  "minutes_offset": 0,
+  "send_system_notification": 1,
+  "condition_type": "Python",
+  "send_to_all_assignees": 0,
+  "message_type": "Markdown",
+  "message": "Scheduled service for vehicle {{ doc.registration_no }} is due on {{ doc.next_due_date }} under maintenance plan {{ doc.name }}. Please raise a Fleet Job Card and book the workshop slot.",
+  "attach_print": 0,
+  "attach_files": "",
+  "doctype": "Notification",
+  "recipients": [
+   {
+    "receiver_by_role": "Fleet Manager",
+    "doctype": "Notification Recipient"
+   }
+  ]
+ },
+ {
+  "name": "Fleet - Driver Licence Expiring",
+  "enabled": 1,
+  "is_standard": 1,
+  "module": "Fleet Management",
+  "channel": "Email",
+  "subject": "Driver licence for {{ doc.driver_name }} expires on {{ doc.licence_expiry }}",
+  "event": "Days Before",
+  "document_type": "Fleet Driver",
+  "date_changed": "licence_expiry",
+  "days_in_advance": 30,
+  "minutes_offset": 0,
+  "send_system_notification": 1,
+  "condition_type": "Python",
+  "send_to_all_assignees": 0,
+  "message_type": "Markdown",
+  "message": "The driving licence for {{ doc.driver_name }} ({{ doc.name }}) expires on {{ doc.licence_expiry }}. Please ensure the licence is renewed before assigning further trips.",
+  "attach_print": 0,
+  "attach_files": "",
+  "doctype": "Notification",
+  "recipients": [
+   {
+    "receiver_by_role": "Fleet Manager",
+    "doctype": "Notification Recipient"
+   }
+  ]
+ },
+ {
+  "name": "Fleet - Compliance Document Expiring",
+  "enabled": 1,
+  "is_standard": 1,
+  "module": "Fleet Management",
+  "channel": "Email",
+  "subject": "{{ doc.document_type }} for {{ doc.registration_no }} expires on {{ doc.expiry_date }}",
+  "event": "Days Before",
+  "document_type": "Fleet Compliance Document",
+  "date_changed": "expiry_date",
+  "days_in_advance": 30,
+  "minutes_offset": 0,
+  "send_system_notification": 1,
+  "condition_type": "Python",
+  "send_to_all_assignees": 0,
+  "message_type": "Markdown",
+  "message": "Compliance document {{ doc.document_type }} for vehicle {{ doc.registration_no }} expires on {{ doc.expiry_date }}. Please renew and upload the updated document.",
+  "attach_print": 0,
+  "attach_files": "",
+  "doctype": "Notification",
+  "recipients": [
+   {
+    "receiver_by_role": "Fleet Manager",
+    "doctype": "Notification Recipient"
+   }
+  ]
+ },
+ {
+  "name": "Fleet - Insurance Policy Expiring",
+  "enabled": 1,
+  "is_standard": 1,
+  "module": "Fleet Management",
+  "channel": "Email",
+  "subject": "Insurance policy {{ doc.policy_no }} expires on {{ doc.expiry_date }}",
+  "event": "Days Before",
+  "document_type": "Fleet Insurance Policy",
+  "date_changed": "expiry_date",
+  "days_in_advance": 30,
+  "minutes_offset": 0,
+  "send_system_notification": 1,
+  "condition_type": "Python",
+  "send_to_all_assignees": 0,
+  "message_type": "Markdown",
+  "message": "Insurance policy {{ doc.policy_no }} ({{ doc.name }}) expires on {{ doc.expiry_date }}. Please arrange renewal before the expiry date to keep the covered vehicles road-legal.",
+  "attach_print": 0,
+  "attach_files": "",
+  "doctype": "Notification",
+  "recipients": [
+   {
+    "receiver_by_role": "Fleet Manager",
+    "doctype": "Notification Recipient"
+   }
+  ]
+ }
+]

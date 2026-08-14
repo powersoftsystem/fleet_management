@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+sdist/
+wheels/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Unit test / coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.cache
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Node / frontend build artefacts
+node_modules/
+yarn-error.log
+npm-debug.log*
+.yarn/
+*.tsbuildinfo
+
+# Frappe / bench generated
+fleet_management/docs/current
+fleet_management/public/dist/
+fleet_management/public/node_modules/
+*.pyc
+sites/
+logs/
+.build
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local secrets
+.env
+*.local

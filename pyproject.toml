@@ -1,0 +1,54 @@
+[project]
+name = "fleet_management"
+version = "0.1.0"
+description = "Fleet, rental, maintenance, insurance and trip costing for ERPNext"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0" }
+authors = [
+    { name = "Powersoft Systems", email = "info@powersoftsystems.com" },
+]
+keywords = ["frappe", "erpnext", "fleet", "rental", "logistics", "maintenance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+# Frappe apps declare their runtime dependencies through the bench/site
+# requirements chain, so this list is intentionally empty.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/powersoftsystems/fleet_management"
+Repository = "https://github.com/powersoftsystems/fleet_management"
+Issues = "https://github.com/powersoftsystems/fleet_management/issues"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "fleet_management"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
+ignore = [
+    "B017",
+    "B023",
+    "B904",
+    "E101",
+    "E501",
+    "W191",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

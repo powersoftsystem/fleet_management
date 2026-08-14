@@ -1,0 +1,292 @@
+[
+ {
+  "name": "Fleet Management",
+  "label": "Fleet Management",
+  "title": "Fleet Management",
+  "sequence_id": 25,
+  "app": "erpnext",
+  "type": "Workspace",
+  "link_type": "DocType",
+  "icon": "getting-started",
+  "indicator_color": "blue",
+  "hide_custom": 0,
+  "public": 1,
+  "is_hidden": 0,
+  "content": "[{\"id\":\"fmHdrA\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Fleet Management</b></span>\",\"col\":12}},{\"id\":\"fmSc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Vehicle\",\"col\":3}},{\"id\":\"fmSc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Rental Contract\",\"col\":3}},{\"id\":\"fmSc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Trip\",\"col\":3}},{\"id\":\"fmSc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Job Card\",\"col\":3}},{\"id\":\"fmSc5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Compliance Document\",\"col\":3}},{\"id\":\"fmHdrB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Key Numbers</b></span>\",\"col\":12}},{\"id\":\"fmNc1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Vehicles\",\"col\":3}},{\"id\":\"fmNc2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Vehicles On Rent\",\"col\":3}},{\"id\":\"fmNc3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Vehicles In Maintenance\",\"col\":3}},{\"id\":\"fmNc4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Job Cards\",\"col\":3}},{\"id\":\"fmNc5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Rental Contracts\",\"col\":3}},{\"id\":\"fmHdrC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Explore</b></span>\",\"col\":12}},{\"id\":\"fmCd1\",\"type\":\"card\",\"data\":{\"card_name\":\"Fleet Masters\",\"col\":4}},{\"id\":\"fmCd2\",\"type\":\"card\",\"data\":{\"card_name\":\"Rentals\",\"col\":4}},{\"id\":\"fmCd3\",\"type\":\"card\",\"data\":{\"card_name\":\"Trips & Dispatch\",\"col\":4}},{\"id\":\"fmCd4\",\"type\":\"card\",\"data\":{\"card_name\":\"Maintenance & Fuel\",\"col\":4}},{\"id\":\"fmCd5\",\"type\":\"card\",\"data\":{\"card_name\":\"Insurance & Compliance\",\"col\":4}}]",
+  "doctype": "Workspace",
+  "number_cards": [
+   {
+    "number_card_name": "Total Vehicles",
+    "label": "Total Vehicles",
+    "doctype": "Workspace Number Card"
+   },
+   {
+    "number_card_name": "Vehicles On Rent",
+    "label": "Vehicles On Rent",
+    "doctype": "Workspace Number Card"
+   },
+   {
+    "number_card_name": "Vehicles In Maintenance",
+    "label": "Vehicles In Maintenance",
+    "doctype": "Workspace Number Card"
+   },
+   {
+    "number_card_name": "Open Job Cards",
+    "label": "Open Job Cards",
+    "doctype": "Workspace Number Card"
+   },
+   {
+    "number_card_name": "Active Rental Contracts",
+    "label": "Active Rental Contracts",
+    "doctype": "Workspace Number Card"
+   }
+  ],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Fleet Vehicle",
+    "doc_view": "List",
+    "label": "Fleet Vehicle",
+    "color": "Blue",
+    "doctype": "Workspace Shortcut"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Fleet Rental Contract",
+    "doc_view": "List",
+    "label": "Fleet Rental Contract",
+    "color": "Green",
+    "doctype": "Workspace Shortcut"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Fleet Trip",
+    "doc_view": "List",
+    "label": "Fleet Trip",
+    "color": "Cyan",
+    "doctype": "Workspace Shortcut"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Fleet Job Card",
+    "doc_view": "List",
+    "label": "Fleet Job Card",
+    "color": "Orange",
+    "doctype": "Workspace Shortcut"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Fleet Compliance Document",
+    "doc_view": "List",
+    "label": "Fleet Compliance Document",
+    "color": "Red",
+    "doctype": "Workspace Shortcut"
+   }
+  ],
+  "links": [
+   {
+    "type": "Card Break",
+    "label": "Fleet Masters",
+    "hidden": 0,
+    "link_type": "DocType",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 3,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Vehicle",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Vehicle",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Vehicle Type",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Vehicle Type",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Driver",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Driver",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Card Break",
+    "label": "Rentals",
+    "hidden": 0,
+    "link_type": "DocType",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 2,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Rental Contract",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Rental Contract",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Rental Invoice Schedule",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Rental Invoice Schedule",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Card Break",
+    "label": "Trips & Dispatch",
+    "hidden": 0,
+    "link_type": "DocType",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 1,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Trip",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Trip",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Card Break",
+    "label": "Maintenance & Fuel",
+    "hidden": 0,
+    "link_type": "DocType",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 3,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Job Card",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Job Card",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Maintenance Plan",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Maintenance Plan",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Fuel Log",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Fuel Log",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Card Break",
+    "label": "Insurance & Compliance",
+    "hidden": 0,
+    "link_type": "DocType",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 3,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Insurance Policy",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Insurance Policy",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Insurance Claim",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Insurance Claim",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   },
+   {
+    "type": "Link",
+    "label": "Fleet Compliance Document",
+    "hidden": 0,
+    "link_type": "DocType",
+    "link_to": "Fleet Compliance Document",
+    "onboard": 0,
+    "is_query_report": 0,
+    "link_count": 0,
+    "doctype": "Workspace Link"
+   }
+  ],
+  "quick_lists": [],
+  "custom_blocks": [],
+  "roles": [
+   {
+    "role": "System Manager",
+    "doctype": "Has Role"
+   },
+   {
+    "role": "Fleet Manager",
+    "doctype": "Has Role"
+   },
+   {
+    "role": "Fleet Supervisor",
+    "doctype": "Has Role"
+   },
+   {
+    "role": "Fleet Driver",
+    "doctype": "Has Role"
+   }
+  ]
+ }
+]
