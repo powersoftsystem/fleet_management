@@ -1,0 +1,40 @@
+name: Unpack app source
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decode, verify and unpack
+        run: |
+          set -e
+          if [ ! -f fleet_management.tar.xz.b64 ]; then
+            echo "Already unpacked - nothing to do."
+            exit 0
+          fi
+          base64 -d fleet_management.tar.xz.b64 > /tmp/fm.tar.xz
+          echo "dd3611a024ad6ff4ee8f836dab31bdec  /tmp/fm.tar.xz" | md5sum -c -
+          tar -xJf /tmp/fm.tar.xz -C /tmp
+          test -f /tmp/fleet_management/fleet_management/hooks.py
+          cp -r /tmp/fleet_management/. .
+          rm -f fleet_management.tar.xz.b64
+          echo "Unpacked $(find fleet_management -type f | wc -l) files under fleet_management/"
+
+      - name: Commit source
+        run: |
+          set -e
+          if [ -f fleet_management.tar.xz.b64 ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -m "Unpack fleet_management app source for bench get-app"
+          git push
